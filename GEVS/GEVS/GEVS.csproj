@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B525C479-12A8-40F7-AC10-2E314E64E0AA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GEVS</RootNamespace>
+    <AssemblyName>GEVS</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ManifestCertificateThumbprint>6E9A47DB3E6E56E394B4061A379A11E92FDE2FAD</ManifestCertificateThumbprint>
+    <ManifestKeyFile>GEVS_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>true</SignManifests>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Project\GEVS\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://localhost/GEVS/</UpdateUrl>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\WINDOWS\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeGeneration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodeGeneration.Designer.cs">
+      <DependentUpon>CodeGeneration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodeNotUsedReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CodeNotUsedReport.Designer.cs">
+      <DependentUpon>CodeNotUsedReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodesNotUsed.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CodesNotUsed.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConstituencyInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConstituencyInput.Designer.cs">
+      <DependentUpon>ConstituencyInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConstituencyTB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConstituencyTB.Designer.cs">
+      <DependentUpon>ConstituencyTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LookUpAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LookUpAccount.designer.cs">
+      <DependentUpon>LookUpAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LookupConst.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LookupConst.Designer.cs">
+      <DependentUpon>LookupConst.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LookupParliamentary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LookupParliamentary.Designer.cs">
+      <DependentUpon>LookupParliamentary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LookupPoll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LookupPoll.Designer.cs">
+      <DependentUpon>LookupPoll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LookupPresident.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LookupPresident.Designer.cs">
+      <DependentUpon>LookupPresident.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainGEVS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainGEVS.Designer.cs">
+      <DependentUpon>MainGEVS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParliamentaryRep.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ParliamentaryRep.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ParliamentaryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParliamentaryReport.Designer.cs">
+      <DependentUpon>ParliamentaryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParliamentarySummaryContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParliamentarySummaryContainer.Designer.cs">
+      <DependentUpon>ParliamentarySummaryContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParliamentarySummaryRep.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ParliamentarySummaryRep.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ParlServerName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParlServerName.Designer.cs">
+      <DependentUpon>ParlServerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresidentialRep.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PresidentialRep.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PresidentialReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresidentialReport.Designer.cs">
+      <DependentUpon>PresidentialReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresidentSummaryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PresidentSummaryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PresSummaryRepCont.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresSummaryRepCont.Designer.cs">
+      <DependentUpon>PresSummaryRepCont.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ServerName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerName.Designer.cs">
+      <DependentUpon>ServerName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SummaryOfVotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SummaryOfVotes.Designer.cs">
+      <DependentUpon>SummaryOfVotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VotePrintout.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VotePrintout.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="VoterLookup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoterLookup.Designer.cs">
+      <DependentUpon>VoterLookup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParliamentaryTB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParliamentaryTB.Designer.cs">
+      <DependentUpon>ParliamentaryTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PollingStationTB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PollingStationTB.Designer.cs">
+      <DependentUpon>PollingStationTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PresidentialTB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PresidentialTB.Designer.cs">
+      <DependentUpon>PresidentialTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CodeGeneration.resx">
+      <DependentUpon>CodeGeneration.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeNotUsedReport.resx">
+      <DependentUpon>CodeNotUsedReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodesNotUsed.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CodesNotUsed.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConstituencyInput.resx">
+      <DependentUpon>ConstituencyInput.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConstituencyTB.resx">
+      <DependentUpon>ConstituencyTB.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookUpAccount.resx">
+      <DependentUpon>LookUpAccount.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookupConst.resx">
+      <DependentUpon>LookupConst.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookupParliamentary.resx">
+      <DependentUpon>LookupParliamentary.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookupPoll.resx">
+      <DependentUpon>LookupPoll.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LookupPresident.resx">
+      <DependentUpon>LookupPresident.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainGEVS.resx">
+      <DependentUpon>MainGEVS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParliamentaryRep.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ParliamentaryRep.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParliamentaryReport.resx">
+      <DependentUpon>ParliamentaryReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParliamentarySummaryContainer.resx">
+      <DependentUpon>ParliamentarySummaryContainer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParliamentarySummaryRep.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ParliamentarySummaryRep.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParlServerName.resx">
+      <DependentUpon>ParlServerName.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresidentialRep.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PresidentialRep.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresidentialReport.resx">
+      <DependentUpon>PresidentialReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresidentSummaryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PresidentSummaryReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresSummaryRepCont.resx">
+      <DependentUpon>PresSummaryRepCont.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerName.resx">
+      <DependentUpon>ServerName.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SummaryOfVotes.resx">
+      <DependentUpon>SummaryOfVotes.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VotePrintout.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>VotePrintout.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoterLookup.resx">
+      <DependentUpon>VoterLookup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParliamentaryTB.resx">
+      <DependentUpon>ParliamentaryTB.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PollingStationTB.resx">
+      <DependentUpon>PollingStationTB.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PresidentialTB.resx">
+      <DependentUpon>PresidentialTB.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserAccounts.resx">
+      <DependentUpon>UserAccounts.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoterRegister.resx">
+      <DependentUpon>VoterRegister.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VotersAuthentication.resx">
+      <DependentUpon>VotersAuthentication.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VotingParliament.resx">
+      <DependentUpon>VotingParliament.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VotingPresident.resx">
+      <DependentUpon>VotingPresident.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VVPATContainer.resx">
+      <DependentUpon>VVPATContainer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UserAccounts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserAccounts.designer.cs">
+      <DependentUpon>UserAccounts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoterRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VoterRegister.Designer.cs">
+      <DependentUpon>VoterRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VotersAuthentication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VotersAuthentication.Designer.cs">
+      <DependentUpon>VotersAuthentication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VotingParliament.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VotingParliament.Designer.cs">
+      <DependentUpon>VotingParliament.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VotingPresident.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VotingPresident.Designer.cs">
+      <DependentUpon>VotingPresident.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VVPATContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VVPATContainer.Designer.cs">
+      <DependentUpon>VVPATContainer.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Globe-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GEVS_TemporaryKey.pfx" />
+    <None Include="Resources\ec_1logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="BusinessObjects.CrystalReports.10.5">
+      <Visible>False</Visible>
+      <ProductName>Crystal Reports Basic for Visual Studio 2008 %28x86, x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.8.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Studio 2008 Report Viewer</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
